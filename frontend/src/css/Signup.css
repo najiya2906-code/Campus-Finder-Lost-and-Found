@@ -1,0 +1,145 @@
+/* Signup page container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #f0f8ff, #d1e7ff);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Signup box */
+.signup-box {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto; /* center horizontally */
+  box-sizing: border-box;
+}
+
+/* Ensure inputs take full width and align properly */
+.signup-box input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.signup-box input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+  outline: none;
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-msg {
+  color: #dc3545;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.signup-box p {
+  margin-top: 1rem;
+  color: #212529;
+}
+
+.signup-box a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width:576px) {
+  .signup-container {
+    padding: 1rem;
+  }
+  .signup-box {
+    padding: 2rem 1rem;
+    max-width: 100%; /* take full width on small screens */
+  }
+}
+/* Role dropdown - matches other inputs */
+.signup-box select {
+  width: 100%;
+  padding: 0.8rem 1rem; /* Same as inputs */
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 2px solid #e9ecef; /* Same border style */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: white;
+  appearance: none; /* remove default arrow in some browsers */
+}
+
+.signup-box select:focus {
+  border-color: #0d6efd; /* Blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25); /* Match input focus */
+  outline: none;
+}
+
+/* Password field wrapper */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+/* Eye icon positioning */
+.toggle-eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.toggle-eye:hover {
+  color: #0d6efd;
+}
+
+/* Prevent arrows in number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+

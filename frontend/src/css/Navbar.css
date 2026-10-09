@@ -1,0 +1,243 @@
+/* Navbar - CampusFinder Modern Blue Theme */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: linear-gradient(90deg, #004aad);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0.8rem 0;  /* ⬅ ADD THIS */
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+
+/* Logo Section */
+.logo a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.logo a:hover {
+  color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.navbar .navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ⭐ Fix overflow */
+  gap: 0.7rem; /* spacing when wrapping */
+  margin: 0 auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end; /* make links align right inside their container */
+  flex: 1; /* take up remaining space to push links to right */
+}
+
+
+/* Individual Links */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ffc107;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffc107;
+  transform: translateY(-2px);
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ffc107;
+  border: none;
+  color: #003366;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3);
+}
+
+.logout-btn:hover {
+  background: #ffb300;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar .navbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------------- */
+/* 🔔 Notification Bell & Dropdown */
+/* ----------------------------- */
+
+.notification-bell {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: transform 0.2s ease;
+  margin-left: 1rem;
+}
+
+.notification-bell:hover {
+  transform: scale(1.1);
+  color: #ffc107;
+}
+
+/* Red unread count badge */
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(255, 77, 77, 0.6);
+}
+
+/* Dropdown box styling */
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 280px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 9999;
+  animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Each notification item */
+.notification-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.notification-item:hover {
+  background: #f5f7ff;
+}
+
+/* Unread vs Read */
+.notification-item.unread {
+  background: #eef7ff;
+  border-left: 4px solid #0d6efd;
+}
+
+.notification-item.read {
+  background: #fff;
+}
+
+/* Footer link inside dropdown */
+.notification-footer {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 8px;
+  font-size: 0.9rem;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.notification-footer:hover {
+  background: #eaf2ff;
+  font-weight: 600;
+}

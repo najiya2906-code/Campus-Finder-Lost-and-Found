@@ -1,0 +1,277 @@
+.feed-page {
+  padding: 40px 20px;
+  background-color: #bccceb;
+  height: auto; /* allow page to grow and scroll */
+}
+
+/* Header: greeting left, title center */
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Left greeting */
+.feed-greeting-left {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.feed-greeting-left span {
+  font-weight: 700;
+  color: #0b5ed7;
+}
+
+/* Feed title centered */
+.feed-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  flex: 1;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Section Styling */
+.feed-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid #ccc;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.section-title.lost {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.section-title.found {
+  color: #198754;
+  border-color: #198754;
+}
+
+/* Cards Layout */
+.feed-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feed-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feed-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feed-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.feed-card .card-body {
+  padding: 15px;
+}
+
+.feed-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.feed-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.feed-card small {
+  display: block;
+  color: #888;
+  margin-top: 6px;
+}
+
+.no-items {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  background: #eef3ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.clickable-image {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feed-card {
+    width: 90%;
+  }
+  .feed-header {
+    justify-content: center;
+    text-align: center;
+  }
+  .feed-greeting-left {
+    margin-bottom: 10px;
+  }
+}
+
+/* Ensure body scroll works */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* === Search Bar Styling === */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0 40px 0;
+  width: 100%;
+}
+
+.search-bar-wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0d6efd;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.search-bar-with-icon {
+  width: 100%;
+  padding: 12px 20px 12px 45px;
+  border-radius: 35px;
+  border: 2px solid #0d6efd;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(13, 110, 253, 0.2);
+}
+
+.search-bar-with-icon::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.search-bar-with-icon:hover {
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+}
+
+.search-bar-with-icon:focus {
+  border-color: #0a58ca;
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+  background-color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar-wrapper {
+    width: 85%;
+  }
+
+  .search-bar-with-icon {
+    font-size: 15px;
+  }
+}
+
+/* ================================
+   CENTER SEARCH BAR + STATUS FILTER
+   ================================ */
+.feed-header .d-flex {
+  width: 100%;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px; /* Space between search bar and dropdown */
+  margin-top: 20px;
+}
+
+/* Center search bar wrapper */
+.feed-header .search-bar-wrapper {
+  margin: 0 auto !important;
+}
+
+/* ===== Status Dropdown Styling ===== */
+.feed-header select {
+  width: 230px; /* make it cleaner */
+  padding: 10px 12px;
+  border-radius: 30px;
+  border: 2px solid #0d6efd;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0d6efd;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(13, 110, 253, 0.25);
+}
+
+/* Hover */
+.feed-header select:hover {
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Focus */
+.feed-header select:focus {
+  border-color: #0a58ca;
+  box-shadow: 0 0 12px rgba(13, 110, 253, 0.6);
+}   
+
+
+.badge.bg-danger {
+  color: white !important;
+  font-weight: 700;
+}
+
+.badge.bg-success {
+  background-color: #198754 !important; /* Bootstrap green */
+  color: white !important;               /* White text */
+}
+
+.badge.bg-warning {
+  background-color: transparent !important;
+  color:  #0a58ca !important;
+  box-shadow: none !important;
+}

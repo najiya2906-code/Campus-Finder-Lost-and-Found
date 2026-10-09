@@ -1,0 +1,103 @@
+/* Base popup style */
+.top-popup {
+  position: fixed;
+  top: 50%;                 
+  left: 50%;                
+  transform: translate(-50%, -50%);
+  padding: 25px 30px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  z-index: 1050;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  animation: fadeInScale 0.4s ease forwards;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
+  opacity: 0;
+}
+
+/* Gradient background colors for each type */
+.top-popup.success { 
+  background: linear-gradient(135deg, #28a745, #3ac162); /* green */
+}
+.top-popup.error { 
+  background: linear-gradient(135deg, #dc3545, #e66773); /* red */
+}
+.top-popup.confirm { 
+  background: linear-gradient(135deg, #e6eaef, #3e6fd1); /* blue */
+}
+.top-popup.question { 
+  background: linear-gradient(135deg, #e1e139, #33c5d6); /* teal */
+}
+
+/* Stack multiple popups nicely */
+.top-popup.stacked {
+  top: calc(50% + var(--stack-offset, 0px));
+}
+
+/* Buttons inside popup */
+.popup-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-popup button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.top-popup button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Input inside popup */
+.top-popup input {
+  margin-top: 15px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  max-width: 350px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.top-popup input:focus {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.4);
+}
+
+/* Card title inside popup */
+.top-popup .card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Fade-in + scale animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

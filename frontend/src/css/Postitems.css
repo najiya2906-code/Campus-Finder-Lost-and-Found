@@ -1,0 +1,115 @@
+/* 🌈 Background and Centering */
+.postitem-page {
+  background: linear-gradient(#bccceb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 📦 Square Form Box */
+.postitem-card {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  padding: 30px 28px; /* equal padding on all sides */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postitem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏷️ Title */
+.postitem-card h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 1.4rem;
+}
+
+/* 📋 Form Layout */
+.postitem-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🏷️ Labels */
+.postitem-card label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* 🧠 Inputs + Textarea + Select */
+.postitem-card input,
+.postitem-card textarea,
+.postitem-card select {
+  width: 100%;
+  padding: 10px 14px; /* balanced padding inside fields */
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}
+
+/* ✨ Focus Effect */
+.postitem-card input:focus,
+.postitem-card textarea:focus,
+.postitem-card select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+  background-color: #fff;
+}
+
+/* 🖊️ Textarea */
+.postitem-card textarea {
+  resize: none;
+  min-height: 60px;
+  line-height: 1.4;
+}
+
+/* 🚀 Submit Button */
+.postitem-card button {
+  width: 100%; /* matches width of inputs */
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.postitem-card button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .postitem-card {
+    max-width: 90%;
+    padding: 25px 18px;
+  }
+
+  .postitem-card h2 {
+    font-size: 1.2rem;
+  }
+}

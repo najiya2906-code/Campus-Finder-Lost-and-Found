@@ -1,0 +1,110 @@
+/* Image inside card */
+.detail-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Card body */
+.item-detail-card .card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-detail-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.item-detail-card .card-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Attractive “I Found This Item” Button */
+.found-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  margin-top: 20px; /* spacing above button */
+}
+
+.found-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.found-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,107,107,0.5);
+}
+
+/* Remove scrolling on the entire page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ /* overflow: hidden;  completely remove scrollbars */
+}
+
+/* Container for centering the card */
+.item-detail-page {
+  height: 100vh;             /* full viewport height */
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: flex-start;   /* align to top instead of center */
+  padding-top: 60px;         /* adjust spacing from top */
+  background-color: #f9fbff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* Card styling (already centered by flex) */
+.item-detail-card {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* Lost item style (blue) */
+
+/* Lost item button: "I Lost This Item" */
+.lost-btn {
+  background: linear-gradient(135deg, #28a745, #218838); /* green gradient */
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  margin-top: 20px; /* spacing above button */
+}
+
+.lost-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #218838, #1c5e2c); /* darker green on hover */
+}
+
+.lost-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40,167,69,0.5); /* green focus outline */
+}
+

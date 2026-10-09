@@ -1,0 +1,166 @@
+/* Import Google Font for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Container for login page */
+.login-container {
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;  /* Centers vertically */
+  min-height: 90vh;  /* Takes most of the viewport height */
+  background: linear-gradient(135deg,#bccceb);  /* Softer, original-like gradient for better appeal */
+  padding: 2rem;  /* Symmetric padding on all sides for outside spacing */
+  box-sizing: border-box;  /* Ensures padding doesn't cause overflow */
+}
+
+/* Login Box with animation and overflow fix */
+.login-box {
+  background: white;
+  padding: 3rem;  /* Consistent padding inside for balanced spacing */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);  /* Slightly softer shadow */
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;  /* Prevents content from spilling outside */
+  font-family: 'Poppins', sans-serif;  /* Apply modern font */
+  animation: fadeIn 0.5s ease-in;  /* Add fade-in animation */
+  box-sizing: border-box;  /* Ensures internal elements fit properly */
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);  /* Subtle upward slide */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box h1 {
+  color: #0d6efd;  /* Back to original blue for consistency */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;  /* Consistent spacing */
+}
+
+.login-box .form-group {
+  margin-bottom: 1.5rem;  /* Equal vertical spacing between form groups */
+  box-sizing: border-box;  /* Prevents any overflow in groups */
+}
+
+.login-box label {
+  font-weight: 600;
+  color: #0d6efd;  /* Matching color for labels */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Input with icon styling */
+.input-with-icon {
+  position: relative;
+  box-sizing: border-box;  /* Ensures icon and input fit without issues */
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 15px;  /* Icon positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0d6efd;  /* Icon color */
+  font-size: 1.2rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;  /* Extra padding for icon */
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;  /* Consistent font */
+  box-sizing: border-box;  /* Prevents padding from causing overflow */
+}
+
+.login-box input::placeholder {
+  color: #a0a0a0;  /* Subtle placeholder color */
+}
+
+.login-box input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);  /* Enhanced focus effect */
+  outline: none;
+}
+
+/* Submit Button with gradient */
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #0d6efd;  /* Reverted to solid color for simplicity */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;  /* Ensures button fits properly */
+}
+
+.btn-submit:hover {
+  background-color: #0b5ed7;  /* Darker shade on hover */
+  transform: translateY(-2px);
+}
+
+/* Loading spinner inside button */
+.btn-submit .spinner-border {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
+
+/* Error Message with better styling */
+.error-msg {
+  color: #dc3545;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: rgba(220, 53, 69, 0.1);  /* Subtle background */
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-sizing: border-box;  /* Prevents any overflow */
+}
+
+/* Link styling */
+.login-box p {
+  text-align: center;
+  margin-top: 1.5rem;  /* Consistent spacing */
+}
+
+.login-box a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 1rem;  /* Reduced symmetric padding */
+  }
+
+  .login-box {
+    padding: 2rem;
+    max-width: 90%;  /* Ensures it doesn't go outside on small screens */
+  }
+
+  .login-box input {
+    font-size: 0.9rem;  /* Slightly smaller */
+  }
+}
