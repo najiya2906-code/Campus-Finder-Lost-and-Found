@@ -1,37 +1,35 @@
-# Campus Finder – Lost & Found Item System
+Campus Finder – Lost & Found Item System
 
 Campus Finder is a full-stack web application designed to help campus users report, search, and manage lost and found items efficiently. It provides a centralized platform where users can share information about missing belongings and found items within their campus.
 
-## Features
+Features
 
-* **Report Lost Items:** Post details of items that have been lost on campus.
-* **Report Found Items:** Share information about items found on campus.
-* **Search Items:** Browse and search for lost and found item listings.
-* **Item Management:** Store and manage item details in a database.
-* **Responsive User Interface:** Access the application through a React.js-based interface.
-* **REST API Integration:** Communicate between the frontend and backend using Flask APIs.
+* Report Lost Items: Post details of items that have been lost on campus.
+* Report Found Items: Share information about items found on campus.
+* Search Items: Browse and search for lost and found item listings.
+* Item Management: Store and manage item details in a database.
+* Responsive User Interface: Access the application through a React.js-based interface.
+* REST API Integration: Communicate between the frontend and backend using Flask APIs.
 
-*Note: Features such as login, image uploads, filtering, and claim requests should be listed here only if they are implemented in your project.*
+Tech Stack
 
-## Tech Stack
-
-**Frontend**
+Frontend
 
 * React.js
 * CSS
 * JavaScript
 
-**Backend**
+Backend
 
 * Python
 * Flask
 * REST APIs
 
-**Database**
+Database
 
 * MongoDB
 
-**Development Tools**
+Development Tools
 
 * Visual Studio Code
 * Git
@@ -39,9 +37,8 @@ Campus Finder is a full-stack web application designed to help campus users repo
 * npm
 * Python pip
 
-## Project Structure
+Project Structure
 
-```text
 Campus-Finder/
 ├── frontend/
 │   ├── public/
@@ -54,11 +51,8 @@ Campus-Finder/
 │   └── ...
 ├── .gitignore
 └── README.md
-```
 
-*The folder and file names may vary depending on the actual project structure.*
-
-## How It Works
+How It Works
 
 1. Campus users access the application through the React.js frontend.
 2. Users can submit information about lost or found items.
@@ -66,87 +60,67 @@ Campus-Finder/
 4. Flask processes requests and interacts with MongoDB to store or retrieve item information.
 5. The application displays the available item details to users.
 
-## Installation and Setup
+Installation and Setup
 
-### Prerequisites
+Prerequisites
 
 Install the following before running the application:
 
 * Node.js and npm
 * Python 3
-* MongoDB 
+* MongoDB
 * Git
 
-### 1. Clone the Repository
+1. Clone the Repository
 
-```bash
-git clone https://github.com/yashashree2025/Campus-Finder-Lost-and-Found.git
+git clone https://github.com/najiya2906-code/Campus-Finder-Lost-and-Found.git
 cd Campus-Finder-Lost-and-Found
-```
 
-
-
-### 2. Set Up the Backend
+2. Set Up the Backend
 
 Open a terminal in the backend folder:
 
-```bash
 cd backend
-```
 
 Create a Python virtual environment:
 
-```bash
 python -m venv venv
-```
 
 Activate it on Windows PowerShell:
 
-```powershell
 .\venv\Scripts\Activate.ps1
-```
 
 Install the required packages:
 
-```bash
 pip install -r requirements.txt
-```
 
 Configure the MongoDB connection and other required environment variables according to your backend code. Do not publish database credentials or secret keys.
 
-Start the Flask application using the correct entry file. For example, if the entry file is `app.py`:
+Start the Flask application using the correct entry file. For example, if the entry file is "app.py":
 
-```bash
 python app.py
-```
 
 The server address and port depend on the Flask configuration in your project.
 
-### 3. Set Up the Frontend
+3. Set Up the Frontend
 
 Open another terminal:
 
-```bash
 cd frontend
-```
 
 Install the dependencies:
 
-```bash
 npm install
-```
 
 Start the React development server:
 
-```bash
 npm run dev
-```
 
-If your project uses Create React App instead of Vite, use `npm start`.
+If your project uses Create React App instead of Vite, use "npm start".
 
 Open the local URL displayed in the terminal to access the frontend.
 
-## Database Configuration
+Database Configuration
 
 Campus Finder uses MongoDB to store and manage lost and found item information.
 
@@ -154,9 +128,9 @@ Before running the application:
 
 * Ensure MongoDB is running or your MongoDB Atlas database is accessible.
 * Configure the connection string using the method expected by your backend.
-* Keep credentials in environment variables and exclude `.env` files from GitHub.
+* Keep credentials in environment variables and exclude ".env" files from GitHub.
 
-## Future Enhancements
+Future Enhancements
 
 * User authentication and authorization
 * Advanced search and category filters
@@ -164,24 +138,31 @@ Before running the application:
 * Item claim and return workflow
 * Email notifications for matching items
 
-*These are potential enhancements, not claims about existing functionality.*
+Learning Outcomes
 
-## Learning Outcomes
-
-Through this project, I gained practical experience with:
+Through this collaborative project, we gained practical experience with:
 
 * Building a responsive frontend using React.js.
 * Developing backend APIs using Python Flask.
 * Integrating a MongoDB database.
 * Connecting frontend components with backend APIs.
 * Understanding the workflow of a full-stack web application.
+* Collaborating on software development using Git and GitHub.
 
-## Author
+Contributors
 
-**Yashashree Parte**
+This project was collaboratively developed by:
+
+Najiya Gulam Shaikh
+
+GitHub: https://github.com/najiya2906-code
+
+Yashashree Parte
 
 GitHub: https://github.com/yashashree2025
 
-## License
+Both contributors collaborated on the design, development, and implementation of this project.
 
-This project is available for educational and learning purposes. Add a formal license if you intend to distribute it under specific reuse terms.
+License
+
+This project is available for educational and learning purposes. Add a formal license if you intend to distribute it under specific reuse terms.￼Enter
