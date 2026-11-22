@@ -180,11 +180,11 @@ Through this project, I gained practical experience with:
 
 This project was collaboratively developed by:
 
-Najiya Gulam Shaikh
+**Najiya Gulam Shaikh**
 
 GitHub: https://github.com/najiya2906-code
 
-Yashashree Parte
+**Yashashree Parte**
 
 GitHub: https://github.com/yashashree2025
 
